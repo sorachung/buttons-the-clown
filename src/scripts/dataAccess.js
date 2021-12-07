@@ -5,6 +5,7 @@ const applicationState = {
 }
 
 const API = "http://localhost:8088"
+const mainContainer = document.querySelector("#container")
 
 export const fetchReservations = () => {
   return fetch(`${API}/reservations`)
@@ -28,6 +29,23 @@ export const fetchCompletedReservations = () => {
     .then(completedReservations => {
       applicationState.completedReservations = completedReservations;
     })
+}
+
+export const sendReservation = (userReservation) => {
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userReservation)
+  }
+
+  return fetch(`${API}/reservations`, fetchOptions)
+    .then(response => response.json())
+    .then(() => {
+      mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+    })
+
 }
 
 export const getReservations = () => {
