@@ -1,0 +1,37 @@
+{
+  "clowns": [
+    {
+      "id": 1,
+      "name": "Mike"
+    },
+    {
+      "id": 2,
+      "name": "Leslie"
+    }
+  ],
+  "completedReservations": [
+    {
+      "id": 1,
+      "reservationId": 1,
+      "clownId": 2
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "parentName": "Mark Smith",
+      "childName": "Dewey",
+      "numberOfChildren": 13,
+      "address": "303 Park Pky, Nashville, TN 37216",
+      "reservationLength": 2.5
+    },
+    {
+      "id": 2,
+      "parentName": "Pep Guardiola",
+      "childName": "Phil",
+      "numberOfChildren": 11,
+      "address": "7080 Whatever Way, Nashville, TN 37216",
+      "reservationLength": 1.75
+    }
+  ]
+}
