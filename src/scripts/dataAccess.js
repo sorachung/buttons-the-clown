@@ -29,3 +29,7 @@ export const fetchCompletedReservations = () => {
       applicationState.completedReservations = completedReservations;
     })
 }
+
+export const getReservations = () => {
+  applicationState.reservations.map(reservation => ({ ...reservation }));
+}

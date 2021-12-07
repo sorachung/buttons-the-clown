@@ -22,7 +22,8 @@
       "parentName": "Mark Smith",
       "childName": "Dewey",
       "numberOfChildren": 13,
-      "address": "303 Park Pky, Nashville, TN 37216",
+      "partyAddress": "303 Park Pky, Nashville, TN 37216",
+      "partyDate": "2021-12-22",
       "reservationLength": 2.5
     },
     {
@@ -30,7 +31,8 @@
       "parentName": "Pep Guardiola",
       "childName": "Phil",
       "numberOfChildren": 11,
-      "address": "7080 Whatever Way, Nashville, TN 37216",
+      "partyAddress": "7080 Whatever Way, Nashville, TN 37216",
+      "partyDate": "2021-12-23",
       "reservationLength": 1.75
     }
   ]
