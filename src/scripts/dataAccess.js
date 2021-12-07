@@ -9,7 +9,7 @@ const mainContainer = document.querySelector("#container")
 
 export const fetchReservations = () => {
   return fetch(`${API}/reservations`)
-    .then(response => response.json)
+    .then(response => response.json())
     .then(reservations => {
       applicationState.reservations = reservations;
     })
@@ -17,7 +17,7 @@ export const fetchReservations = () => {
 
 export const fetchClowns = () => {
   return fetch(`${API}/clowns`)
-    .then(response => response.json)
+    .then(response => response.json())
     .then(clowns => {
       applicationState.clowns = clowns;
     })
@@ -25,7 +25,7 @@ export const fetchClowns = () => {
 
 export const fetchCompletedReservations = () => {
   return fetch(`${API}/completedReservations`)
-    .then(response => response.json)
+    .then(response => response.json())
     .then(completedReservations => {
       applicationState.completedReservations = completedReservations;
     })
@@ -48,6 +48,16 @@ export const sendReservation = (userReservation) => {
 
 }
 
-export const getReservations = () => {
-  applicationState.reservations.map(reservation => ({ ...reservation }));
+export const deleteReservation = (id) => {
+  return fetch(`${API}/reservations/${id}`, { method: "DELETE"})
+    .then(
+      () => {
+        mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+      }
+    )
 }
+
+export const getReservations = () => {
+  return applicationState.reservations.map(reservation => ({ ...reservation }));
+}
+

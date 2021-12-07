@@ -27,21 +27,12 @@
       "reservationLength": 2.5
     },
     {
-      "id": 2,
-      "parentName": "Pep Guardiola",
-      "childName": "Phil",
-      "numberOfChildren": 11,
-      "partyAddress": "7080 Whatever Way, Nashville, TN 37216",
-      "partyDate": "2021-12-23",
-      "reservationLength": 1.75
-    },
-    {
-      "parentName": "Ralf Rangnick",
-      "childName": "Cristiano",
-      "numberOfChildren": "13",
-      "partyAddress": "324 Hello Way",
-      "partyDate": "2021-12-17",
-      "reservationLength": "2",
+      "parentName": "Mikel Arteta",
+      "childName": "Saka",
+      "numberOfChildren": "14",
+      "partyAddress": "3232 Chocolate Dr",
+      "partyDate": "2021-12-25",
+      "reservationLength": "3",
       "id": 3
     }
   ]

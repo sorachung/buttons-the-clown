@@ -10,3 +10,7 @@ const render = () => {
 };
 
 render();
+
+mainContainer.addEventListener("stateChanged", event => {
+  render();
+})
