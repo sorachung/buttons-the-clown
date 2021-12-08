@@ -61,3 +61,20 @@ export const getReservations = () => {
   return applicationState.reservations.map(reservation => ({ ...reservation }));
 }
 
+export const getClowns = () => applicationState.clowns.map(clown => ({ ...clown }))
+
+export const getCompletedReservations = () => applicationState.completedReservations.map(res => ({ ...res }))
+
+export const saveCompletedReservations = (userReservation) => {
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json"
+    },
+    body: JSON.stringify(userReservation)
+  }
+
+  return fetch(`${API}/completedReservations`, fetchOptions)
+    .then(response => response.json())
+    .then( () => mainContainer.dispatchEvent(new CustomEvent("stateChanged")))
+}

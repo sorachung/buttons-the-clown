@@ -1,10 +1,15 @@
 import { ButtonsTheClown } from "./ButtonsTheClown.js";
-import { fetchReservations } from "./dataAccess.js";
+import { fetchClowns, fetchCompletedReservations, fetchReservations } from "./dataAccess.js";
 
 const mainContainer = document.querySelector("#container");
 
 const render = () => {
-  fetchReservations().then(() => {
+  Promise.all([
+    fetchReservations(),
+    fetchClowns(),
+    fetchCompletedReservations()
+  ])
+  .then(() => {
     mainContainer.innerHTML = ButtonsTheClown();
   })
 };

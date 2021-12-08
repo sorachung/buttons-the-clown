@@ -11,9 +11,10 @@
   ],
   "completedReservations": [
     {
-      "id": 1,
       "reservationId": 1,
-      "clownId": 2
+      "clownId": 1,
+      "dateCompleted": 1638992216076,
+      "id": 1
     }
   ],
   "reservations": [
@@ -34,6 +35,15 @@
       "partyDate": "2021-12-25",
       "reservationLength": "3",
       "id": 3
+    },
+    {
+      "parentName": "Pep Guardiola",
+      "childName": "Phil",
+      "numberOfChildren": "11",
+      "partyAddress": "4433 Blahblah Pky",
+      "partyDate": "2021-12-26",
+      "reservationLength": "5",
+      "id": 4
     }
   ]
 }
