@@ -1,3 +1,4 @@
+import { CompletedReservations } from "./CompletedReservations.js"
 import { ReservationForm } from "./ReservationForm.js"
 import { Reservations } from "./Reservations.js"
 
@@ -11,6 +12,11 @@ export const ButtonsTheClown = () => {
     <article>
       <h2>Reservations</h2>
       ${Reservations()}
+    </article>
+
+    <article>
+      <h2>Completed Reservations</h2>
+      ${CompletedReservations()}
     </article>
   `
 }
