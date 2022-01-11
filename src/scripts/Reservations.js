@@ -17,6 +17,8 @@ export const Reservations = () => {
         );
     });
 
+    foundIncompletedRes.sort((a, b) => a.partyDate.localeCompare(b.partyDate));
+
     return `
     <ul>
       ${foundIncompletedRes
